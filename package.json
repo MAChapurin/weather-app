@@ -2,7 +2,6 @@
   "name": "weather-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://machapurin.github.io/weather-react",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "react": "^18.2.0",
