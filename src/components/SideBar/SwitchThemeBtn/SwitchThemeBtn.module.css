@@ -1,0 +1,32 @@
+.btn-theme {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn-theme svg path {
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.btn-theme--dark #theme-path2, .btn-theme--dark #theme-path3 {
+  transform: translateX(30px);
+}
+
+.btn-theme--dark #theme-path2 {
+  fill: var(--orange);
+}
+
+.btn-theme--dark #theme-path3 {
+  fill: var(--bg-support-color);
+}
+
+.btn-theme:hover {
+  transform: scale(1.05);
+}
+
+.btn-theme:active {
+  transform: scale(1);
+}

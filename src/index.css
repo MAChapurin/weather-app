@@ -1,0 +1,157 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('../src/fonts/Rubik-Light.woff2') format('woff2'),
+      url('../src/fonts/Rubik-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../src/fonts/Rubik-Regular.woff2') format('woff2'),
+      url('../src/fonts/Rubik-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../src/fonts/Rubik-Medium.woff2') format('woff2'),
+      url('../src/fonts/Rubik-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../src/fonts/Rubik-Bold.woff2') format('woff2'),
+      url('../src/fonts/Rubik-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('../src/fonts/Rubik-Black.woff2') format('woff2'),
+      url('../src/fonts/Rubik-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --orange: #EC6E4D;
+}
+
+
+:root, body[data-theme='light'] {
+  --main-color: #48484a;
+  --support-color: #acacac;
+  --bg-color: #f1f1f1;
+  --bg-support-color: #fff;
+}
+
+body[data-theme='dark'] {
+  --main-color: #E6E6E6;
+  --support-color: #6D6D6D;
+  --bg-color: #100E1C;
+  --bg-support-color: #212331;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--main-color);
+  background: linear-gradient(var(--bg-color), var(--support-color));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: start; */
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:focus, a:focus-visible {
+  outline: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+button:focus, button:focus-visible {
+  outline: 0;
+}
+
+.container {
+  background-color: var(--bg-color);
+  width: 1440px;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  overflow: auto;
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.main {
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 140px 1fr 120px;
+}
+
+
+@media (max-width: 1439px) {
+  body {
+    display: block;
+
+  }
+
+  .container {
+    max-width: 100%;
+    grid-template-columns: 330px 1fr;
+    height: 100vh;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 78px;
+  }
+}
+
+@media (max-width: 833px) {
+  .container {
+    display: block;
+    width: 100%;
+    height: min-content;
+  }
+  .main {
+    padding: 0;
+  }
+
+}
