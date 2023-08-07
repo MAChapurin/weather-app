@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/weather-app/static/css/main.e44b0395.css",
+    "main.js": "/weather-app/static/js/main.47d03928.js",
+    "static/media/Rubik-Bold.woff": "/weather-app/static/media/Rubik-Bold.87117101c42fdb69d98a.woff",
+    "static/media/Rubik-Medium.woff": "/weather-app/static/media/Rubik-Medium.2d7c3aac52dbcf1e9a76.woff",
+    "static/media/Rubik-Regular.woff": "/weather-app/static/media/Rubik-Regular.9b504b121d513b85cf70.woff",
+    "static/media/Rubik-Black.woff": "/weather-app/static/media/Rubik-Black.bdf6a460c7686616735a.woff",
+    "static/media/Rubik-Light.woff": "/weather-app/static/media/Rubik-Light.b98975383295673ea225.woff",
+    "static/media/Rubik-Bold.woff2": "/weather-app/static/media/Rubik-Bold.15b537d9fdb84230fd6e.woff2",
+    "static/media/Rubik-Medium.woff2": "/weather-app/static/media/Rubik-Medium.b87db4c34be5f3bcbae4.woff2",
+    "static/media/Rubik-Regular.woff2": "/weather-app/static/media/Rubik-Regular.7faeaac164d429f053a1.woff2",
+    "static/media/Rubik-Black.woff2": "/weather-app/static/media/Rubik-Black.081082db404863de373b.woff2",
+    "static/media/Rubik-Light.woff2": "/weather-app/static/media/Rubik-Light.b1f0f1d816758ea3bc4a.woff2",
+    "index.html": "/weather-app/index.html",
+    "main.e44b0395.css.map": "/weather-app/static/css/main.e44b0395.css.map",
+    "main.47d03928.js.map": "/weather-app/static/js/main.47d03928.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e44b0395.css",
+    "static/js/main.47d03928.js"
+  ]
+}
