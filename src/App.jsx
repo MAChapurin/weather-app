@@ -7,6 +7,8 @@ import "./index.css";
 import { Detail } from "./components/Detail";
 import { Forecast } from "./components/Forecast";
 import { SideBar } from "./components/SideBar";
+import { Background } from "./components/Background";
+import { getBackground } from "./utils/getBackground";
 
 function App() {
   const [theme, setTheme] = React.useState(
@@ -36,6 +38,8 @@ function App() {
     localStorage.getItem("visibility") || 6200
   );
 
+  const [status, setStatus] = React.useState('ясно');
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme, body }}>
       <DetailContext.Provider
@@ -52,10 +56,11 @@ function App() {
           setVisibility,
         }}
       >
-        <CityContext.Provider value={{ loading, setLoading, city, setCity }}>
+        <CityContext.Provider value={{ loading, setLoading, city, setCity, status, setStatus }}>
           <div className="container">
             <SideBar />
             <main className="main">
+              <Background src={getBackground(status)}/>
               <Forecast />
               <Detail />
             </main>

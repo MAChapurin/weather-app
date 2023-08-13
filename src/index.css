@@ -122,6 +122,7 @@ button:focus, button:focus-visible {
   overflow-y: auto;
   display: grid;
   grid-template-columns: 140px 1fr 120px;
+  position: relative;
 }
 
 

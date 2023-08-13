@@ -2,6 +2,8 @@
   padding: 40px 0 5px;
   height: max-content;
   grid-column: 2/3;
+  z-index: 1;
+  opacity: 0.8;
 }
 
 .forecast__container {

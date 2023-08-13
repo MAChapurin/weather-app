@@ -13,9 +13,9 @@ export function SideBar() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [temp, setTemp] = React.useState(0);
   const [feels, setFeels] = React.useState(' ');
-  const [status, setStatus] = React.useState('ясно');
+
   const [icon, setIcon] = React.useState('04d')
-  const { city } = React.useContext(CityContext);
+  const { city, status, setStatus } = React.useContext(CityContext);
   const inputRef = React.useRef(null);
 
   React.useEffect(() => {
