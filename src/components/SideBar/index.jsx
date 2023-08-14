@@ -8,6 +8,7 @@ import { LocationSvg } from "./Location";
 import { SidePanel } from "./SidePanel";
 import { SwitchThemeBtn } from "./SwitchThemeBtn";
 import { formatDate } from "../../utils/formarDate";
+import { YandexMap } from "../Map";
 
 export function SideBar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -15,7 +16,7 @@ export function SideBar() {
   const [feels, setFeels] = React.useState(' ');
 
   const [icon, setIcon] = React.useState('04d')
-  const { city, status, setStatus } = React.useContext(CityContext);
+  const { city, status, setStatus, coords } = React.useContext(CityContext);
   const inputRef = React.useRef(null);
 
   React.useEffect(() => {
@@ -55,6 +56,7 @@ export function SideBar() {
         <span className="location__desc">{city}</span>
       </div>
       <SidePanel {...{ isOpen, setIsOpen, inputRef, setTemp, setFeels, setStatus, setIcon}} />
+      <YandexMap {...{coords}}/>
     </section>
   );
 }

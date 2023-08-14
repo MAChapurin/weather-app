@@ -20,6 +20,8 @@ function App() {
   const [city, setCity] = React.useState(
     localStorage.getItem("city") || "Москва"
   );
+
+  const [coords, setCoords] = React.useState({lat: 77, lon: 79});
   const [loading, setLoading] = React.useState(false);
   const [windSpeed, setWindSpeed] = React.useState(
     localStorage.getItem("windSpeed") || 7
@@ -56,7 +58,7 @@ function App() {
           setVisibility,
         }}
       >
-        <CityContext.Provider value={{ loading, setLoading, city, setCity, status, setStatus }}>
+        <CityContext.Provider value={{ loading, setLoading, city, setCity, status, setStatus, coords, setCoords }}>
           <div className="container">
             <SideBar />
             <main className="main">

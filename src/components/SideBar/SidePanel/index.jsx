@@ -17,7 +17,7 @@ export function SidePanel({
 }) {
   const { setWindSpeed, setWindDeg, setHumidity, setPressure, setVisibility } =
     React.useContext(DetailContext);
-  const { loading, setLoading, city, setCity } = React.useContext(CityContext);
+  const { loading, setLoading, city, setCity, setCoords } = React.useContext(CityContext);
 
   const [error, setError] = React.useState("");
   const [query, setQuery] = React.useState("");
@@ -52,6 +52,7 @@ export function SidePanel({
           });
           const { display_name, lat, lon } = data[0];
           const cityName = display_name.split(",")[0];
+          setCoords({lat, lon});
           setQuery("");
           setCity(cityName);
           return fetch(
@@ -152,7 +153,7 @@ export function SidePanel({
           setTemp,
           setFeels,
           setStatus,
-          setIcon,
+          setIcon
         }}
       />
     </div>

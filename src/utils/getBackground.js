@@ -2,6 +2,7 @@ export function getBackground(weather) {
   console.log(weather)
   const isDay = new Date().getHours() > 5 && new Date().getHours() < 20 ? true : false
   switch (weather) {
+    case 'небольшой дождь':
     case 'дождь':
       return 'https://cdn.coverr.co/videos/coverr-rain-falling-on-windshield-6625/1080p.mp4';
     case 'ясно':

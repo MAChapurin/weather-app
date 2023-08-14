@@ -17,7 +17,7 @@ export function SearchHistory({
   setStatus,
   setIcon,
 }) {
-  const { setLoading, setCity } = React.useContext(CityContext);
+  const { setLoading, setCity, setCoords } = React.useContext(CityContext);
   const { setWindSpeed, setWindDeg, setHumidity, setPressure, setVisibility } =
     React.useContext(DetailContext);
 
@@ -57,6 +57,7 @@ export function SearchHistory({
                   setFeels(Math.floor(main.feels_like));
                   setStatus(weather[0].description);
                   setIcon(weather[0].icon);
+                  setCoords({lat, lon});
                 })
                 .catch((e) => {
                   console.log(e.message);
